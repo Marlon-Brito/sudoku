@@ -9,14 +9,18 @@ import static br.com.dio.model.GameStatusEnum.NON_STARTED;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 
+// Classe que define o tabuleiro
 public class Board {
 
+    // Atributos
     private final List<List<Space>> spaces;
 
+    // Construtor
     public Board(final List<List<Space>> spaces) {
         this.spaces = spaces;
     }
 
+    // Métodos
     public List<List<Space>> getSpaces() {
         return spaces;
     }

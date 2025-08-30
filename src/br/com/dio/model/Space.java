@@ -1,12 +1,14 @@
 package br.com.dio.model;
 
+// Classe que define os espaços
 public class Space {
 
+    // Atributos
     private Integer actual;
     private final int expected;
     private final boolean fixed;
 
-
+    // Construtor
     public Space(final int expected, final boolean fixed) {
         this.expected = expected;
         this.fixed = fixed;
@@ -15,6 +17,7 @@ public class Space {
         }
     }
 
+    // Métodos
     public Integer getActual() {
         return actual;
     }

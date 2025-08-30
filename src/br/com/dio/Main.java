@@ -14,14 +14,18 @@ import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static java.util.stream.Collectors.toMap;
 
+// Classe principal
 public class Main {
 
+    // Definindo um Scanner para receber as entradas de dados
     private final static Scanner scanner = new Scanner(System.in);
 
+    // Atributos
     private static Board board;
 
     private final static int BOARD_LIMIT = 9;
 
+    // Método da classe principal onde se consome o projeto
     public static void main(String[] args) {
         final var positions = Stream.of(args)
                 .collect(toMap(
@@ -30,6 +34,7 @@ public class Main {
                 ));
         var option = -1;
         while (true){
+            // Menu do jogo
             System.out.println("Selecione uma das opções a seguir");
             System.out.println("1 - Iniciar um novo Jogo");
             System.out.println("2 - Colocar um novo número");
@@ -40,6 +45,7 @@ public class Main {
             System.out.println("7 - Finalizar jogo");
             System.out.println("8 - Sair");
 
+            // Opções de ações do jogo
             option = scanner.nextInt();
 
             switch (option){
@@ -56,6 +62,7 @@ public class Main {
         }
     }
 
+    // Métodos
     private static void startGame(final Map<String, String> positions) {
         if (nonNull(board)){
             System.out.println("O jogo já foi iniciado");
